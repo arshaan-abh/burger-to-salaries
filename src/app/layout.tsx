@@ -12,8 +12,10 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <html lang="fa-IR">
-      <body className={`${sans.variable} antialiased font-sans`}>
+    <html lang="fa-IR" className="h-full" dir="rtl">
+      <body
+        className={`${sans.variable} antialiased font-sans bg-body flex items-center justify-center min-h-full`}
+      >
         {children}
       </body>
     </html>
