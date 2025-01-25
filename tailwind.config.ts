@@ -13,6 +13,9 @@ export default {
       fontFamily: {
         sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
       },
+      screens: {
+        ml: "896px",
+      },
     },
   },
   plugins: [Animate],
