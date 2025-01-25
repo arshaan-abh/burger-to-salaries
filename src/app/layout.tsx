@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Vazirmatn as Sans } from "next/font/google";
 import "./globals.css";
 import { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 const sans = Sans({ subsets: ["arabic"], variable: "--font-sans" });
 
@@ -14,7 +15,10 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="fa-IR" className="h-full" dir="rtl">
       <body
-        className={`${sans.variable} antialiased font-sans bg-body flex items-center justify-center min-h-full`}
+        className={cn(
+          sans.variable,
+          "antialiased font-sans bg-body flex items-center justify-center min-h-full"
+        )}
       >
         {children}
       </body>
